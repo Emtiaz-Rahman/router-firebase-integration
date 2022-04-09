@@ -7,11 +7,14 @@ const Header = () => {
     return (
         <div className='header'>
             <nav>
-            <Link to="/">Home</Link>
-            <Link to="/login">Login</Link>
+                <Link to="/">Home</Link>
+                <Link to="/products">Products</Link>
+                <Link to="/order">Order</Link>
+                <Link to="/regester">Regester</Link>
+                <Link to="/login">Login</Link>
 
             </nav>
-            
+
         </div>
     );
 };

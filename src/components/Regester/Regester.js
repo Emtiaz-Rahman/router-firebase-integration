@@ -1,17 +1,19 @@
 import React from 'react';
+import './Regester.css'
 
-const Login = () => {
+const Regester = () => {
     return (
         <div>
-            <h4>Please  login </h4>
+            <h4>Please  Regester Now </h4>
             <form className='btn-input'>
-                <button>Google Sign in</button>
+                
+                <input type="text" placeholder='Your Name' />
                 <input type="email" name="" id="" placeholder='Your Email' />
                 <input type="password" name="" id="" placeholder='Enter Your Password' />
-                <input type="submit" value="Login" />
+                <input type="submit" value="Regester" />
             </form>
         </div>
     );
 };
 
-export default Login;
+export default Regester;
