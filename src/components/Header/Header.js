@@ -5,7 +5,7 @@ import './Header.css'
 
 
 const Header = () => {
-    const { user } = useFireBase();
+    const { user,handleSignOut } = useFireBase();
     return (
         <div className='header'>
             <nav>
@@ -13,8 +13,10 @@ const Header = () => {
                 <Link to="/products">Products</Link>
                 <Link to="/order">Order</Link>
                 <Link to="/regester">Regester</Link>
-                {user.uid ?
-                    <button>Google Sign Out</button> :
+                <span>{user?.displayName && user.displayName}</span>
+                {user?.uid
+                 ?
+                    <button onClick={handleSignOut}>Sign Out</button> :
                     <Link to="/login">Login</Link>
                 }
 
