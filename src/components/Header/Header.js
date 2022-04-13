@@ -1,27 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import useFireBase from '../../hooks/useFireBase';
-import './Header.css'
+import { Link } from "react-router-dom"
+import useFirebase from '../../CoustomHooks/useFirebase';
 
+import "./Header.css"
 
 const Header = () => {
-    const { user,handleSignOut } = useFireBase();
+    const { user, handleSignOut } = useFirebase();
     return (
-        <div className='header'>
+        <div className='header-part'>
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/products">Products</Link>
-                <Link to="/order">Order</Link>
+                <Link to="/orders">Orders</Link>
                 <Link to="/regester">Regester</Link>
                 <span>{user?.displayName && user.displayName}</span>
-                {user?.uid
-                 ?
-                    <button onClick={handleSignOut}>Sign Out</button> :
-                    <Link to="/login">Login</Link>
+                {
+                    user?.uid
+                        ?
+                        <button onClick={handleSignOut} >SignOut</button>
+                        :
+                        <Link to="/login">Login</Link>
                 }
 
             </nav>
-
         </div>
     );
 };

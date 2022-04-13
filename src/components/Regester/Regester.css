@@ -1,5 +1,8 @@
-.btn-input input {
+.input-form input {
     display: block;
     margin: 0 auto;
     margin-top: 10px;
+    width: 25%;
+    height: 30px;
+
 }
